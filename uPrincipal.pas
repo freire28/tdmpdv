@@ -85,7 +85,7 @@ implementation
 
 {$R *.dfm}
 
-uses uCliente, uCaracteristica;
+uses uCliente, uCaracteristica, uProdutos;
   {
 uses uCliente,  ufuncoesgerais, uCategoria , System.IniFiles, uDMIFood,
   uProdutos, uBairro, uMunicipio, uEntregador, uClasseProduto, uConfiguracoes;
@@ -93,18 +93,17 @@ uses uCliente,  ufuncoesgerais, uCategoria , System.IniFiles, uDMIFood,
 
 procedure TfrmPrincipal.actCadCategoriaExecute(Sender: TObject);
 begin
-  Application.CreateForm(TfrmCaracteristicas, frmCaracteristicas);
-  frmCaracteristicas.ShowModal;
-  frmCaracteristicas.Free;
-
+  Application.CreateForm(TfrmCadCaracteristicas, frmCadCaracteristicas);
+  frmCadCaracteristicas.ShowModal;
+  frmCadCaracteristicas.Free;
 end;
 
 procedure TfrmPrincipal.actCadProdutosExecute(Sender: TObject);
 begin
- { Application.CreateForm(TfrmProdutos, frmProdutos);
+  Application.CreateForm(TfrmProdutos, frmProdutos);
   frmProdutos.ShowModal;
   frmProdutos.Free;
-  }
+
 end;
 
 procedure TfrmPrincipal.actEntregadorExecute(Sender: TObject);

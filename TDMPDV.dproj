@@ -125,7 +125,11 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="uCaracteristica.pas">
-            <Form>frmCaracteristicas</Form>
+            <Form>frmCadCaracteristicas</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="uProdutos.pas">
+            <Form>frmCadProdutos</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">

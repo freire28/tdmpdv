@@ -1,7 +1,8 @@
-inherited frmCaracteristicas: TfrmCaracteristicas
+inherited frmCadCaracteristicas: TfrmCadCaracteristicas
   Caption = 'Caracteristicas'
   ClientHeight = 390
   ClientWidth = 620
+  Position = poMainFormCenter
   ExplicitWidth = 636
   ExplicitHeight = 429
   PixelsPerInch = 96
@@ -21,13 +22,13 @@ inherited frmCaracteristicas: TfrmCaracteristicas
     inherited cxGrid1: TcxGrid
       Left = 10000
       Top = 10000
-      Width = 548
+      Width = 572
       Height = 164
       TabOrder = 2
       Visible = False
       ExplicitLeft = 10000
       ExplicitTop = 10000
-      ExplicitWidth = 548
+      ExplicitWidth = 572
       ExplicitHeight = 164
       inherited cxGrid1DBTableView1: TcxGridDBTableView
         DataController.DataSource = dsDados
@@ -46,8 +47,8 @@ inherited frmCaracteristicas: TfrmCaracteristicas
       end
     end
     object cxDBRadioGroup1: TcxDBRadioGroup [1]
-      Left = 36
-      Top = 62
+      Left = 24
+      Top = 44
       Caption = 'Tipo'
       DataBinding.DataField = 'TIPO_DADOS'
       DataBinding.DataSource = dsDados
@@ -69,8 +70,8 @@ inherited frmCaracteristicas: TfrmCaracteristicas
       Width = 157
     end
     object cxDBTextEdit1: TcxDBTextEdit [2]
-      Left = 36
-      Top = 121
+      Left = 24
+      Top = 103
       DataBinding.DataField = 'DESCRICAO'
       DataBinding.DataSource = dsDados
       Style.BorderColor = clWindowFrame
@@ -78,7 +79,7 @@ inherited frmCaracteristicas: TfrmCaracteristicas
       Style.HotTrack = False
       Style.TransparentBorder = False
       TabOrder = 1
-      Width = 548
+      Width = 572
     end
     inherited lcDadosGroup_Root1: TdxLayoutGroup
       AlignHorz = ahClient

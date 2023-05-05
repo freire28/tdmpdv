@@ -8,7 +8,8 @@ uses
   udmPrincipal in 'udmPrincipal.pas' {dmPrincipal: TDataModule},
   uCliente in 'uCliente.pas' {frmClientes},
   xcadastro in '..\padrao\xcadastro.pas' {xfrmCadastros},
-  uCaracteristica in 'uCaracteristica.pas' {frmCaracteristicas};
+  uCaracteristica in 'uCaracteristica.pas' {frmCadCaracteristicas},
+  uProdutos in 'uProdutos.pas' {frmCadProdutos};
 
 {$R *.res}
 

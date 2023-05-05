@@ -37,6 +37,7 @@ object frmPrincipal: TfrmPrincipal
       Index = 0
     end
     object dxrbntbdxrbn1Tab3: TdxRibbonTab
+      Active = True
       Caption = 'Produtos '
       Groups = <
         item
@@ -55,7 +56,6 @@ object frmPrincipal: TfrmPrincipal
       Index = 2
     end
     object dxrbn1Tab2: TdxRibbonTab
-      Active = True
       Caption = 'Configura'#231#245'es'
       Groups = <
         item
@@ -177,7 +177,6 @@ object frmPrincipal: TfrmPrincipal
     object dxbrmngrMenuBar4: TdxBar
       Caption = 'Configuracoes do Sistema'
       CaptionButtons = <>
-      DockedDockingStyle = dsNone
       DockedLeft = 0
       DockedTop = 0
       FloatLeft = 1198

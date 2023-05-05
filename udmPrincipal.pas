@@ -34,9 +34,15 @@ type
     fdqUsuarioCPF: TStringField;
     fdqUsuarioADMINISTRADOR: TIntegerField;
     fdqRetornaDataServidor: TFDQuery;
+    GeneroProduto: TFDMemTable;
+    GeneroProdutoDESCRICAO: TStringField;
+    GeneroProdutoID: TIntegerField;
+    dsGeneroProduto: TDataSource;
+    procedure DataModuleCreate(Sender: TObject);
   private
     usuarioLogado: TUsuario;
     { Private declarations }
+    procedure CarregaGeneroProduto;
   public
     { Public declarations }
 
@@ -81,6 +87,24 @@ begin
     result := true;
   end;
 
+end;
+
+procedure TdmPrincipal.CarregaGeneroProduto;
+begin
+  GeneroProduto.Insert;
+  GeneroProduto.FieldByName('ID').AsInteger := 1;
+  GeneroProduto.FieldByName('descricao').AsString := 'Subproduto';
+  GeneroProduto.Post;
+
+  GeneroProduto.Insert;
+  GeneroProduto.FieldByName('ID').AsInteger := 0;
+  GeneroProduto.FieldByName('descricao').AsString := 'Mercadoria para Revenda';
+  GeneroProduto.Post;
+end;
+
+procedure TdmPrincipal.DataModuleCreate(Sender: TObject);
+begin
+  GeneroProduto.Open;
 end;
 
 function TdmPrincipal.retornaDataServidor: TDateTime;

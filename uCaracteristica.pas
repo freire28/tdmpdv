@@ -20,7 +20,7 @@ uses
   cxGridInplaceEditForm;
 
 type
-  TfrmCaracteristicas = class(TxfrmCadastros)
+  TfrmCadCaracteristicas = class(TxfrmCadastros)
     fdqDadosID_CARACTERISTICA: TFDAutoIncField;
     fdqDadosDESCRICAO: TStringField;
     fdqDadosTIPO_DADOS: TStringField;
@@ -41,25 +41,25 @@ type
   end;
 
 var
-  frmCaracteristicas: TfrmCaracteristicas;
+  frmCadCaracteristicas: TfrmCadCaracteristicas;
 
 implementation
 
 {$R *.dfm}
 
-procedure TfrmCaracteristicas.dxBarLargeButton7Click(Sender: TObject);
+procedure TfrmCadCaracteristicas.dxBarLargeButton7Click(Sender: TObject);
 begin
   inherited;
   xDescricaoPesquisa.Text;
 end;
 
-procedure TfrmCaracteristicas.fdqDadosBeforeOpen(DataSet: TDataSet);
+procedure TfrmCadCaracteristicas.fdqDadosBeforeOpen(DataSet: TDataSet);
 begin
   inherited;
   fdqDados.Params.ParamByName('DESCRICAO').Value := '-1';
 end;
 
-procedure TfrmCaracteristicas.xbotaoPesquisaClick(Sender: TObject);
+procedure TfrmCadCaracteristicas.xbotaoPesquisaClick(Sender: TObject);
 begin
   inherited;
   if xDescricaoPesquisa.Text <> ''  then

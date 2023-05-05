@@ -1,5 +1,6 @@
 object dmPrincipal: TdmPrincipal
   OldCreateOrder = False
+  OnCreate = DataModuleCreate
   Height = 488
   Width = 628
   object conexaobanco: TFDConnection
@@ -9,7 +10,6 @@ object dmPrincipal: TdmPrincipal
       'User_Name=ADMINISTRADOR'
       'Password=123456'
       'DriverID=MSSQL')
-    Connected = True
     LoginPrompt = False
     Left = 32
     Top = 64
@@ -89,7 +89,30 @@ object dmPrincipal: TdmPrincipal
     Connection = conexaobanco
     SQL.Strings = (
       'select GETDATE() as dataAtual')
-    Left = 96
-    Top = 224
+    Left = 72
+    Top = 120
+  end
+  object GeneroProduto: TFDMemTable
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    ResourceOptions.AssignedValues = [rvSilentMode]
+    ResourceOptions.SilentMode = True
+    UpdateOptions.AssignedValues = [uvCheckRequired, uvAutoCommitUpdates]
+    UpdateOptions.CheckRequired = False
+    UpdateOptions.AutoCommitUpdates = True
+    Left = 32
+    Top = 190
+    object GeneroProdutoID: TIntegerField
+      FieldName = 'ID'
+    end
+    object GeneroProdutoDESCRICAO: TStringField
+      FieldName = 'DESCRICAO'
+      Size = 60
+    end
+  end
+  object dsGeneroProduto: TDataSource
+    DataSet = GeneroProduto
+    Left = 72
+    Top = 192
   end
 end

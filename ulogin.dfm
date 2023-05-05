@@ -12,7 +12,7 @@ object frmLogin: TfrmLogin
   Font.Name = 'Segoe UI'
   Font.Style = []
   OldCreateOrder = False
-  Position = poDesktopCenter
+  Position = poMainFormCenter
   PrintScale = poNone
   PixelsPerInch = 96
   TextHeight = 17
