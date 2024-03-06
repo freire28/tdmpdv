@@ -2,13 +2,12 @@
   Caption = 'Cad. Produtos'
   ClientHeight = 537
   ClientWidth = 631
-  ExplicitWidth = 647
-  ExplicitHeight = 576
-  PixelsPerInch = 96
+  ExplicitWidth = 643
+  ExplicitHeight = 575
   TextHeight = 13
   inherited rbnBotoes: TdxRibbon
     Width = 631
-    ExplicitWidth = 889
+    ExplicitWidth = 631
     inherited dxtabDados: TdxRibbonTab
       Index = 0
     end
@@ -16,8 +15,8 @@
   inherited lcDados: TdxLayoutControl
     Width = 631
     Height = 411
-    ExplicitWidth = 889
-    ExplicitHeight = 587
+    ExplicitWidth = 627
+    ExplicitHeight = 410
     inherited cxGrid1: TcxGrid
       Width = 1260
       ExplicitWidth = 1260
@@ -382,7 +381,6 @@
     object dxLayoutGroupPreco: TdxLayoutGroup
       Parent = dxLgCadastro
       CaptionOptions.Text = 'Pre'#231'o'
-      ButtonOptions.Buttons = <>
       LayoutDirection = ldHorizontal
       ShowBorder = False
       Index = 6
@@ -390,7 +388,6 @@
     object dxLayoutGroupEstoque: TdxLayoutGroup
       Parent = dxLgCadastro
       CaptionOptions.Text = 'New Group'
-      ButtonOptions.Buttons = <>
       Hidden = True
       ItemIndex = 1
       LayoutDirection = ldHorizontal
@@ -400,7 +397,6 @@
     object dxLayoutGroupImpostos: TdxLayoutGroup
       Parent = dxLgCadastro
       CaptionOptions.Text = 'New Group'
-      ButtonOptions.Buttons = <>
       Hidden = True
       LayoutDirection = ldHorizontal
       ShowBorder = False
@@ -409,7 +405,6 @@
     object dxLayoutGroup2: TdxLayoutGroup
       Parent = dxLayoutGroupPreco
       CaptionOptions.Text = 'New Group'
-      ButtonOptions.Buttons = <>
       Hidden = True
       ItemIndex = 1
       ShowBorder = False
@@ -418,7 +413,6 @@
     object dxLayoutGroup3: TdxLayoutGroup
       Parent = dxLayoutGroupPreco
       CaptionOptions.Text = 'New Group'
-      ButtonOptions.Buttons = <>
       Hidden = True
       ShowBorder = False
       Index = 1
@@ -553,6 +547,7 @@
       'cliente=&dataInicial=01/08/2019&dataFinal=10/08/2019&pageSize=10' +
       '00&skip=0'
     Params = <>
+    SynchronizedEvents = False
     Left = 376
     Top = 48
   end

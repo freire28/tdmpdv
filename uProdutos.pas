@@ -19,7 +19,7 @@ uses
   cxDBEdit, cxGroupBox, cxRadioGroup, cxCheckBox, Vcl.DBCtrls, cxMaskEdit,
   cxDropDownEdit, cxLookupEdit, cxDBLookupEdit, cxDBLookupComboBox, cxSpinEdit,
   REST.Types, REST.Response.Adapter, REST.Client, Data.Bind.Components,
-  Data.Bind.ObjectScope;
+  Data.Bind.ObjectScope, dxCore;
 
 type
   TfrmProdutos = class(TxfrmCadastros)
